@@ -1,0 +1,41 @@
+/* SM */
+@media all and (min-width: 576px) {  
+    .thankyou{
+        width:80%;
+    }
+    .thankyou-div{
+        width: 85%;
+    }
+}
+/* MD */
+@media all and (min-width: 768px) {
+    .thankyou{
+        width:60%;
+    }
+    .thankyou-div{
+        width: 70%;
+    }
+}
+/* LG */
+@media all and (min-width: 992px) {
+    .content-width{
+        width: 80%;
+    }
+    .progress-bar{
+        width: 35%;
+    }
+    .thankyou{
+        width:40%;
+    }
+    .thankyou-div{
+        width: 55%;
+    }
+}
+/* XL */
+@media all and (min-width: 1200px) { 
+
+}
+/* XXL */
+@media all and (min-width: 1400px) { 
+
+}

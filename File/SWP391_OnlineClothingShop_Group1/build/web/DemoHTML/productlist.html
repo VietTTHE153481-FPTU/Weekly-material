@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+	  <!--BOOTSTRAP5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/productlist.css">
+    <link rel="stylesheet" href="css/productlistqueries.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid bg-transparent p-3 content-width mh-2000" style="position: relative;">
+        <div class="row">
+          <!-- FILTER -->
+            <div class="col-12 col-lg-3 float-start">
+              <form>
+                <div class="form-floating mb-2">
+                    <input type="text" id="searchbarProduct" class="form-control" placeholder="Search Something">
+                    <label for="searchbarProduct" style="color:black;">Product name</label>
+                </div>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                  <!-- CATEGORY -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                          Category
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <ul class="list-group-flush">
+                                <li class="list-group-item ps-4">
+                                  <input class="form-check-input" type="radio" name="subcategory" id="subcategory0">
+                                  <label class="form-check-label" for="subcategory0">
+                                    All category 
+                                  </label>
+                                </li>
+                                <li class="list-group-item"><strong>Category </strong></li>
+                                <li class="list-group-item ps-4">
+                                  <input class="form-check-input" type="radio" name="subcategory" id="subcategory1">
+                                  <label class="form-check-label" for="subcategory1">
+                                    Sub 1 
+                                  </label>
+                                  <div class="float-end"><span class="badge rounded-pill bg-secondary">0</span></div>
+                                </li>
+                                <li class="list-group-item ps-4">
+                                  <input class="form-check-input" type="radio" name="subcategory" id="subcategory2">
+                                  <label class="form-check-label" for="subcategory2">
+                                    Sub 2
+                                  </label>
+                                  <div class="float-end"><span class="badge rounded-pill bg-secondary">0</span></div>
+                                </li>
+                                <li class="list-group-item"><strong>Category</strong></li>
+                              </ul>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- CATEGORY -->
+                  <!-- BRAND -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                          Brand
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                          <ul class="list-group-flush">
+                              <li class="list-group-item">
+                                <input class="form-check-input" type="radio" name="brand" id="brand0" checked>
+                                <label class="form-check-label" for="brand0">
+                                  All brand
+                                </label>
+                              </li>
+                              <li class="list-group-item">
+                                <input class="form-check-input" type="radio" name="brand" id="brand1">
+                                <label class="form-check-label" for="brand1">
+                                  Brand 1
+                                </label>
+                                <div class="float-end"><span class="badge rounded-pill bg-secondary">0</span></div>
+                              </li>
+                              <li class="list-group-item">
+                                <input class="form-check-input" type="radio" name="brand" id="brand2">
+                                <label class="form-check-label" for="brand2">
+                                  Brand 2
+                                </label>
+                                <div class="float-end"><span class="badge rounded-pill bg-secondary">0</span></div>
+                              </li>
+                          </ul>  
+                        </div>
+                      </div>
+                    </div>
+                    <!-- BRAND -->
+                    <!-- PRICE -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                          Price
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                          <ul class="list-group-flush">
+                            <li class="list-group-item">
+                              <input class="form-check-input" type="radio" name="price" id="price0" checked>
+                              <label class="form-check-label" for="price0">
+                                All price range
+                              </label>
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input" type="radio" name="price" id="price1">
+                              <label class="form-check-label" for="price1">
+                                0-100.000
+                              </label>
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input" type="radio" name="price" id="price2">
+                              <label class="form-check-label" for="price2">
+                                100.000-500.000
+                              </label>
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input" type="radio" name="price" id="price3">
+                              <label class="form-check-label" for="price3">
+                                500.000-1.000.000
+                              </label>
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input" type="radio" name="price" id="price4">
+                              <label class="form-check-label" for="price4">
+                                1.000.000-5.000.000
+                              </label>
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input" type="radio" name="price" id="price5">
+                              <label class="form-check-label" for="price5">
+                                >5.000.000
+                              </label>
+                            </li>
+                          </ul>   
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- PRICE -->
+                  <!-- SUBMIT PARA -->
+                  <div class="d-grid gap-2 my-2">
+                    <button class="btn btn-warning-custom" type="button">Find product</button>
+                  </div>
+                  <!-- SUBMIT PARA -->
+                </form>
+            </div>
+            <!-- FILTER -->
+            <!-- PRODUCT LIST -->
+            <div class="col-12 col-lg-9 float-end">
+                <!-- SORT BUTTON -->
+                  <div class="btn-group flex-wrap pb-3" role="group" aria-label="Basic example">
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-outline-light dropdown-toggle ${st==1?'active':''}" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort by price
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="ProductServlet?p=1&st=${st==1&&sm==1?'0':'1'}&sm=${st==1&&sm==1?'0':'1'}&c=${c}&b=${b}&search=${search}">Ascend&nbsp;${st==1&&sm==1?'<i class="fas fa-check"></i>':''}</a></li>
+                            <li><a class="dropdown-item" href="ProductServlet?p=1&st=${st==1&&sm==2?'0':'1'}&sm=${st==1&&sm==2?'0':'2'}&c=${c}&b=${b}&search=${search}">Descend&nbsp;${st==1&&sm==2?'<i class="fas fa-check"></i>':''}</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-outline-light dropdown-toggle ${st==2?'active':''}" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort by name
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="ProductServlet?p=1&st=${st==2&&sm==1?'0':'2'}&sm=${st==2&&sm==1?'0':'1'}&c=${c}&b=${b}&search=${search}">Ascend&nbsp;${st==2&&sm==1?'<i class="fas fa-check"></i>':''}</a></li>
+                            <li><a class="dropdown-item" href="ProductServlet?p=1&st=${st==2&&sm==2?'0':'2'}&sm=${st==2&&sm==2?'0':'2'}&c=${c}&b=${b}&search=${search}">Descend&nbsp;${st==2&&sm==2?'<i class="fas fa-check"></i>':''}</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-outline-light dropdown-toggle ${st==3?'active':''}" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort by date
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="ProductServlet?p=1&st=${st==3&&sm==1?'0':'3'}&sm=${st==3&&sm==1?'0':'1'}&c=${c}&b=${b}&search=${search}">Ascend&nbsp;${st==3&&sm==1?'<i class="fas fa-check"></i>':''}</a></li>
+                            <li><a class="dropdown-item" href="ProductServlet?p=1&st=${st==3&&sm==2?'0':'3'}&sm=${st==3&&sm==2?'0':'2'}&c=${c}&b=${b}&search=${search}">Descend&nbsp;${st==3&&sm==2?'<i class="fas fa-check"></i>':''}</a></li>
+                        </ul>
+                    </div>
+                  </div>
+                <!-- SORT BUTTON -->
+                <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-3">
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm"> <img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png" class="card-img-top" alt="...">
+                            <div class="label-top shadow-sm">Asus Rog</div>
+                            <div class="card-body">
+                                <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">ASUS Rog</span> <span class="float-end price-hp">12354.00€</span> </div>
+                                <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
+                                <div class="text-center my-4"> <a href="#" class="btn-custom btn-warning-custom">Check offer</a> </div>
+                                <!-- <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span class="float-end"><i class="fas fa-plus"></i></span> </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                      <div class="card h-100 shadow-sm"> <img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png" class="card-img-top" alt="...">
+                          <div class="label-top shadow-sm">Asus Rog</div>
+                          <div class="card-body">
+                              <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success-custom">12354.00€</span> <span class="float-end"><a href="#" class="small text-muted">Reviews</a></span> </div>
+                              <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
+                              <div class="text-center my-4"> <a href="#" class="btn-custom btn-warning-custom">Check offer</a> </div>
+                              <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span class="float-end"><i class="fas fa-plus"></i></span> </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card h-100 shadow-sm"> <img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png" class="card-img-top" alt="...">
+                        <div class="label-top shadow-sm">Asus Rog</div>
+                        <div class="card-body">
+                            <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success-custom">12354.00€</span> <span class="float-end"><a href="#" class="small text-muted">Reviews</a></span> </div>
+                            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
+                            <div class="text-center my-4"> <a href="#" class="btn-custom btn-warning-custom">Check offer</a> </div>
+                            <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span class="float-end"><i class="fas fa-plus"></i></span> </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <nav class="my-3" aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+            </div>
+            <!-- PRODUCT LIST -->
+        </div>
+    </div>
+    <!-- BOOTSTRAP5-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- SCRIPT -->
+    <script src="${pageContext.request.contextPath}/js/script.js"></script>
+</body>
+</html>

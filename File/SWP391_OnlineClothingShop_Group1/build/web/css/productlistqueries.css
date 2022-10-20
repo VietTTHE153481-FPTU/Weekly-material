@@ -1,0 +1,63 @@
+/* SM */
+@media all and (min-width: 576px) {  
+
+}
+/* MD */
+@media all and (min-width: 768px) {
+    .content-width{
+        width: 90%;
+    }
+}
+/* LG */
+@media all and (min-width: 992px) {
+    .content-width{
+        width: 80%;
+    }
+}
+/* XL */
+@media all and (min-width: 1200px) { 
+
+}
+/* XXL */
+@media all and (min-width: 1400px) { 
+
+}
+
+
+@media (max-width: 1400px) {
+    .btn-custom {
+        padding: 5px 20px 5px 20px
+    }
+}
+@media (max-width: 1025px) {
+    .btn-custom {
+        padding: 5px 10px 5px 10px
+    }
+}
+@media (max-width: 768px) {
+    .card-img-top {
+        max-height: 250px
+    }
+}
+@media (max-width: 576px) {
+    .box-img {
+        max-width: 200px
+    }
+
+    .thumb-sec {
+        max-width: 200px
+    }
+}
+@media (max-width: 370px) {
+    .box .btn-custom {
+        padding: 5px 40px 5px 40px;
+        font-size: 1rem
+    }
+}
+@media (max-width: 250px) {
+    .btn-custom {
+        padding: 5px 30px 5px 30px
+    }
+}
+
+
